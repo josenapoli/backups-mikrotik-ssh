@@ -1,0 +1,10 @@
+/system package print file=backupmktsdt.txt; /export file=backupmktsdt.rsc; /system backup save name=backupmktsdt.backup;
+--------------------------------------------------------------------------------
+192.168.1.1 -  example
+!!! Conexion SSH establecida con primera credencial en 192.168.1.1
+!!! Transferencia desde example completa con primera credencial
+!!! Archivo example en el Mikrotik borrado!
+!!! Transferencia desde example completa con primera credencial
+!!! Archivo example en el Mikrotik borrado!
+!!! Transferencia desde example completa con primera credencial
+!!! Archivo example en el SDT Mikrotik borrado!
