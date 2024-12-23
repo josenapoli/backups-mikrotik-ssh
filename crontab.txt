@@ -1,0 +1,5 @@
+# Historico de 90 dias de backups
+0       2       *       *       *       cd /home/user/Mikrotik-backupBackBone-ssh/; /home/user/Mikrotik-backupBackBone-ssh/./backupnsmkt2.sh
+@daily /usr/bin/find /home/user/Mikrotik-backupBackBone-ssh/mikrotik/ -type f -iname '*.rsc' -mtime +90 -delete
+@daily /usr/bin/find /home/user/Mikrotik-backupBackBone-ssh/mikrotik/ -type f -iname '*.backup' -mtime +90 -delete
+@daily /usr/bin/find /home/user/Mikrotik-backupBackBone-ssh/mikrotik/ -type f -iname '*.txt' -mtime +90 -delete
