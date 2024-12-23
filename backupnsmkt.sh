@@ -57,7 +57,7 @@ while read -r line; do
     fi
 done <"$CONF"
 
-cmd="/system package print file=backupmktsdt.txt; /export file=backupmktsdt.rsc; /system backup save name=backupmktsdt.backup;"
+cmd="/system package print file=backupmkt.txt; /export file=backupmkt.rsc; /system backup save name=backupmkt.backup;"
 echo "$cmd" >$LOG
 echo "--------------------------------------------------------------------------------" >>$LOG
 
@@ -107,7 +107,7 @@ for ((a = 0; a < INDEX; a++)); do
 
     sleep 2
 
-    for SCPFILE in backupmktsdt.backup backupmktsdt.rsc backupmktsdt.txt; do
+    for SCPFILE in backupmkt.backup backupmkt.rsc backupmkt.txt; do
         if attempt_scp_transfer "$user" "$pass" "${IP[$a]}" "$SCPFILE" "${BACKUP_PATH}/${DESC[$a]}/"; then
             echo -e " \e[32mOK\e[0m  Transferencia desde ${DESC[$a]} completa."
             echo "!!! Transferencia desde ${DESC[$a]} completa con $cred_label" >>$LOG
@@ -118,8 +118,8 @@ for ((a = 0; a < INDEX; a++)); do
                     echo -e " \e[31mErr\e[0m Borrado de archivo ${DESC[$a]} fallo!"
                     echo "!!! Borrado de archivo ${DESC[$a]} fallo!" >>$LOG
                 else
-                    echo -e " \e[32mOK\e[0m Archivo ${DESC[$a]} en el SDT Mikrotik borrado."
-                    echo "!!! Archivo ${DESC[$a]} en el SDT Mikrotik borrado!" >>$LOG
+                    echo -e " \e[32mOK\e[0m Archivo ${DESC[$a]} en el Mikrotik borrado."
+                    echo "!!! Archivo ${DESC[$a]} en el Mikrotik borrado!" >>$LOG
                 fi
             fi
         else
