@@ -1,4 +1,3 @@
-* Instalar 
 * Servidor linux (almacenará los backups)
 * Usuario de mikrotik habilitado para acceder por SSH desde el servidor anterior
 * sudo apt -y install sshpass mailutils msmtp
