@@ -1,4 +1,4 @@
 * Servidor Debian (almacenará los backups)
 * Usuario de mikrotik habilitado para acceder por SSH desde el servidor anterior
-* sudo apt -y install sshpass mailutils msmtp
+* sudo apt -y install sshpass mailutils msmtp expect
 * Archivo .msmtprc de configuracion SMTP en carpeta de usuario que ejecutará el script diariamente con crontab
